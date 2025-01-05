@@ -10,18 +10,18 @@ html {
 }
 
 .header-top {
-    width: 100vw;
+    width: 100%;
     padding-left: calc(50% - 720px);
     padding-right: calc(50% - 720px);
     height: 800px;
     background-color: #E1FF8F;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 
     &__box-text {
         width: 1440px;
         height: 710px;
-        position: relative;
         overflow: hidden;
     }
 
@@ -38,7 +38,7 @@ html {
     }
 
     &__title {
-        width: 768px;
+        /* width: 768px; */
         height: 156px;
         color: rgb(32, 32, 39);
         font-family: Montserrat;
@@ -99,9 +99,9 @@ html {
         width: 1074px;
         height: 1130.46px;
         position: absolute;
-        left: 854px;
+        right: -480px;
         top: -333.46px;
-
+        /* z-index: 0; */
     }
 
     &__star1 {
@@ -159,7 +159,57 @@ html {
 
 .running-line {
     height: 90px;
+    width: auto;
+    position: absolute;
+    padding-left: 49px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 10;
+    background-color: rgb(188, 236, 48);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 51px;
+    align-items: center;
+    overflow-x: hidden;
+
+    &__text {
+        color: rgb(32, 32, 39);
+        font-family: Montserrat;
+        font-size: 30px;
+        height: 33px;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        display: inline-block;
+
+    }
 }
+
+.px217 {
+    width: 217px;
+}
+
+.px273 {
+    min-width: 273px;
+}
+
+.px326 {
+    min-width: 326px;
+}
+
+.px422 {
+    min-width: 422px;
+}
+
+.px519 {
+    min-width: 519px;
+}
+
+.px588 {
+    min-width: 588px;
+}
+
+
 
 
 .main {
@@ -170,7 +220,7 @@ html {
 }
 
 .about-games {
-    width: 100vw;
+    width: 100%;
     height: 1470px;
     background: rgb(32, 32, 39);
     padding-top: 94px;
@@ -476,7 +526,7 @@ html {
 
 
 .footer {
-    width: 100vw;
+    width: 100%;
     height: 150px;
     background: rgb(189, 237, 53);
     margin: 0 auto;
