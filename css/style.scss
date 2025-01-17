@@ -20,7 +20,7 @@ html {
     position: relative;
 
     &__box-text {
-        width: 1440px;
+        width: 100%;
         height: 710px;
         overflow: hidden;
     }
@@ -228,7 +228,7 @@ html {
     overflow: hidden;
 
     &__big-box {
-        width: 1201px;
+        width: 100%;
         height: 1326px;
         display: flex;
         flex-direction: column;
@@ -325,6 +325,10 @@ html {
         border: none;
     }
 
+    &__button:hover {
+        cursor: pointer;
+    }
+
     &__subtitle {
         color: rgb(32, 32, 39);
         font-family: Montserrat;
@@ -401,14 +405,14 @@ html {
 
 
 .mini-games {
-    width: 1440px;
+    width: 100%;
     height: 3500px;
     background: rgb(32, 32, 39);
     margin: 0 auto;
     padding-top: 48px;
 
     &__big-box {
-        width: 1200px;
+        width: 1201px;
         height: 3310px;
         margin: 0 auto;
         position: relative;
@@ -423,7 +427,7 @@ html {
     }
 
     &__container {
-        width: 1200px;
+        width: 1201px;
         height: 3160px;
         margin-top: 72px;
         display: flex;
@@ -432,7 +436,7 @@ html {
     }
 
     &__article {
-        width: 1200px;
+        width: 1201px;
         height: 500px;
         border-radius: 30px;
         box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
@@ -521,6 +525,13 @@ html {
         height: 69px;
         top: 3320px;
         left: 1199px;
+    }
+
+    &__anch {
+        margin: 0px;
+        padding: 0px;
+        font-size: 0px;
+        line-height: 0px;
     }
 }
 
