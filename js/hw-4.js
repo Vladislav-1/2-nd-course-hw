@@ -1,29 +1,3 @@
-let guessNumber = () => {
-
-    let hiddenNumber = Math.round(Math.random() * 100);
-    let i = 0;
-    while (true) {
-        let numberUser = Number(prompt('Угадайте число от 1 до 100'));
-        if (hiddenNumber === numberUser) {
-            alert(`Вы ввели число ${numberUser}.
-Вы угадали загаданное число!
-Вы это сделали на ${i} ходу!`);
-            break;
-        } else if (hiddenNumber > numberUser) {
-            alert(`Вы ввели число ${numberUser}.
-Ваше число меньше загаданного! Продолжайте отгадывать!`);
-        } else if (hiddenNumber < numberUser) {
-            alert(`Вы ввели число ${numberUser}.
-Ваше число больше загаданного! Продолжайте отгадывать!`);
-        } else {
-            alert(`Пожалуйста, введите число от 1 до 100!`);
-        }
-        i += 1;
-    }
-}
-
-/* ============================================= */
-
 /* Задание 1
 
 Напишите функцию, которая возвращает меньшее из дух чисел.
@@ -35,15 +9,15 @@ let secondNumber = Math.round(Math.random() * 100);
 let returnLess = () => {
     console.log(`Сравниваются два числа: ${firstNumber} и ${secondNumber}.`);
     if (firstNumber < secondNumber) {
-        console.log(`В данном случае меньшим числом яляется число ${firstNumber}.`);
+        return firstNumber;
     } else if (firstNumber > secondNumber) {
-        console.log(`В данном случае меньшим числом яляется число ${secondNumber}.`);
+        return secondNumber;
     } else {
-        console.log(`В данном случае оба числа равны. Выводим число ${firstNumber}.`);
+        return console.log(`В данном случае оба числа равны. Выводим число ${firstNumber}.`);
     }
 }
 
-returnLess();
+console.log(`В данном случае меньшим числом яляется число ${returnLess()}.`);
 
 console.log(`=============================================`);
 
@@ -52,11 +26,13 @@ console.log(`=============================================`);
 Напишите функцию, которая принимает число и возвращает: строку "Число чётное", если число чётное; строку "Число нечётное", если чсило не чётное.
 Подсказка: чётность проверяется с помощью условия n % 2 == 0. */
 
-let z = Math.round(Math.random() * 100);
-console.log(`У нас есть число ${z}.`);
-
 let checkParity = () => {
-    z % 2 != 0 ? console.log(`Число нечётное.`) : console.log(`Число чётное.`);
+    let userNamber = Number(prompt(`Введите любое число: `));
+    if (userNamber % 2 != 0) {
+        return alert(`Число нечётное.`);
+    } else {
+        return alert(`Число чётное.`);
+    }
 }
 
 checkParity();
@@ -68,22 +44,30 @@ console.log(`=============================================`);
 Напишите функцию, которая принимает параметром число и выводит в консоль квадрат этого числа.
 Напишите функцию, которая принимает параметром число и возвращает квадрат этого числа значением - так, чтобы потом это значение можно было использовать. */
 
-let anyNumber = Math.round(Math.random() * 100);
+console.log(``);
 
-let outputSquareNumber = () => {
-    let squareNumber = Number(anyNumber ** 2);
+let outputSquareNumber = (anyNumber) => {
+    let squareNumber = anyNumber ** 2;
     console.log(`Квадратом числа ${anyNumber} является ${squareNumber}.`);
 }
 
-outputSquareNumber();
+outputSquareNumber(4);
+outputSquareNumber(2);
+outputSquareNumber(10);
 
-let outputNewSquareNumber = () => {
-    return Number(anyNumber ** 2);
+console.log(``);
+
+let outputNewSquareNumber = (anyNumber) => {
+    return anyNumber ** 2;
 }
 
-let variable = outputNewSquareNumber();
+let variable1 = outputNewSquareNumber(4);
+let variable2 = outputNewSquareNumber(8);
+let variable3 = outputNewSquareNumber(7);
 
-console.log(`Вот, ${variable} - уже можно использовать.`);
+console.log(`А вот, ${variable1} - уже можно использовать.`);
+console.log(`${variable2} - тоже можно использовать.`);
+console.log(`${variable3} - иже с ними можно использовать.`);
 
 console.log(`=============================================`);
 
@@ -100,17 +84,17 @@ console.log(`=============================================`);
 
 let askHowOld = () => {
     let userAge = Number(prompt("Пожалуйста, укажите Ваш возраст: "));
-    console.log(`Ваш возраст ${userAge}.`);
-    if (userAge < 0 || Number.isNaN(userAge)) {
-        console.log('Вы ввели неправильное значение!');
+    if (userAge < 0 || isNaN(userAge)) {
+        alert('Вы ввели неправильное значение!');
     } else if (0 <= userAge && userAge <= 12) {
-        console.log('Привет, друг!');
+        alert('Привет, друг!');
     } else if (userAge >= 13) {
-        console.log('Добро пожаловать!');
+        alert('Добро пожаловать!');
     }
 }
 
 askHowOld();
+
 
 console.log(`=============================================`);
 
@@ -125,13 +109,16 @@ console.log(`=============================================`);
 Если оба параметра - числа, то возвращает произведение данных чисел.
  */
 
-let checkNumbers = () => {
-    let firstNumber = Number(prompt('Пожалуйста, введите первое число: '));
-    let secondNumber = Number(prompt('Пожалуйста, введите второе число: '));
-    Number.isNaN(firstNumber) || Number.isNaN(secondNumber) ? console.log('Одно или оба значения не являются числом!') : console.log(`Произведение числа ${firstNumber} на число ${secondNumber} равно ${firstNumber * secondNumber}.`);
+let checkNumbers = (firstNumber, secondNumber) => {
+    if (isNaN(firstNumber) || isNaN(secondNumber)) {
+        return res = 'Одно или оба значения не являются числом!';
+    } else {
+        return res = firstNumber * secondNumber;
+    }
 }
 
-checkNumbers();
+alert(checkNumbers(2, 3));
+alert(checkNumbers('FSFAdszgd', 3));
 
 console.log(`=============================================`);
 
@@ -148,7 +135,11 @@ console.log(`=============================================`);
 
 let checkUserNumber = () => {
     let n = Number(prompt('Пожалуйста, введите любое не отрицательное число: '));
-    Number.isNaN(n) ? console.log('Переданный параметр не является числом!') : console.log(`${n} в кубе равняется ${Math.pow(n, 3)}.`);
+    if (isNaN(n)) {
+        return alert('Переданный параметр не является числом!');
+    } else {
+        return alert(`${n} в кубе равняется ${Math.pow(n, 3)}.`);
+    }
 }
 
 checkUserNumber();
@@ -165,13 +156,11 @@ console.log(`=============================================`);
 */
 
 function getArea() {
-    let areaCircle = 3.14 * (Math.pow(this.radius, 2));
-    console.log(`Площадь круга равна ${areaCircle}.`);
+    return (Math.PI * (Math.pow(this.radius, 2))).toFixed(0);
 }
 
 function getPerimeter() {
-    let perimeterCircle = (2 * 3.14 * this.radius).toFixed(0);
-    console.log(`Периметр круга равен ${perimeterCircle}.`);
+    return (2 * Math.PI * this.radius).toFixed(0);
 }
 
 const circle1 = {
@@ -186,8 +175,8 @@ const circle2 = {
     getPerimeter: getPerimeter,
 }
 
-circle1.getArea();
-circle1.getPerimeter();
+alert(`Площадь круга равна ${circle1.getArea()}.`);
+alert(`Периметр круга равен ${circle1.getPerimeter()}.`);
 
-circle2.getArea();
-circle2.getPerimeter();
+alert(`Площадь круга равна ${circle2.getArea()}.`);
+alert(`Периметр круга равен ${circle2.getPerimeter()}.`);
