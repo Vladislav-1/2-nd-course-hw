@@ -15,7 +15,7 @@
         <section class="header-top__box-text">
             <div class="header-top__title-text-button">
                 <h1 class="header-top__title">
-                    Добро пожаловать<br>на мой сайт мини-игр
+                    Добро пожаловать <span class="header-top__bufer"></span>на мой сайт мини-игр
                 </h1>
                 <p class="header-top__text">
                     Тебе предстоит пройти несколько увлекательных игр.<br>Если готов, нажимай <span
@@ -28,7 +28,7 @@
             <div class="header-top__title-text-button-mobile">
                 <div class="header-top__container-mini">
                     <h1 class="header-top__title">
-                        Добро пожаловать<br><br>на мой сайт мини-игр
+                        Добро пожаловать на мой сайт мини-игр
                     </h1>
                     <p class="header-top__text">
                         Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <span
@@ -54,17 +54,17 @@
         <!-- БЕГУЩАЯ СТРОКА -->
         <div class="running-line">
             <div class="running-line__text px217">Викторина</div>
-            <img src="images/star-running-line.png" alt="Звезда в бегущей строке">
-            <div class="running-line__text px273">угадай число</div>
-            <img src="images/star-running-line.png" alt="Звезда в бегущей строке">
-            <div class="running-line__text px326">Переверни текст</div>
-            <img src="images/star-running-line.png" alt="Звезда в бегущей строке">
-            <div class="running-line__text px422">Простая арифметика</div>
-            <img src="images/star-running-line.png" alt="Звезда в бегущей строке">
-            <div class="running-line__text px519">Камень, ножницы, бумага</div>
-            <img src="images/star-running-line.png" alt="Звезда в бегущей строке">
-            <div class="running-line__text px588">Генератор случайных цветов</div>
-            <img src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <div class="running-line__text px273">угадай&nbsp;число</div>
+            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <div class="running-line__text px326">Переверни&nbsp;текст</div>
+            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <div class="running-line__text px422">Простая&nbsp;арифметика</div>
+            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <div class="running-line__text px519">Камень,&nbsp;ножницы,&nbsp;бумага</div>
+            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <div class="running-line__text px588">Генератор&nbsp;случайных&nbsp;цветов</div>
+            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
         </div>
     </header>
 
@@ -85,7 +85,7 @@
                 </div>
                 <div class="about-games__bottom-item">
                     <div class="about-games__article-box">
-                        <a class="about-games__link-article" href="#">
+                        <a class="about-games__link-article" href="#guessNumber">
                             <article class="about-games__box guess-number">
                                 <img class="about-games__img" src="images/guess-number.png" alt="Угадай число">
                                 <div class="about-games__text-title">
@@ -98,7 +98,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a class="about-games__link-article" href="#">
+                        <a class="about-games__link-article" href="#rockScissorsPaper">
                             <article class="about-games__box rock-scissors-paper">
                                 <img class="about-games__img" src="images/rock-scissors-paper.png"
                                     alt="Камень, ножницы, бумага">
@@ -114,7 +114,7 @@
                         </a>
                     </div>
                     <div class="about-games__article-box">
-                        <a class="about-games__link-article" href="#">
+                        <a class="about-games__link-article" href="#simpleArithmetic">
                             <article class="about-games__box simple-arithmetic">
                                 <img class="about-games__img" src="images/simple-arithmetic.png"
                                     alt="Простая арифметика">
@@ -128,7 +128,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a class="about-games__link-article" href="#">
+                        <a class="about-games__link-article" href="#simpleQuiz">
                             <article class="about-games__box simple-quiz">
                                 <img class="about-games__img" src="images/simple-quiz.png" alt="Простая викторина">
                                 <div class="about-games__text-title">
@@ -143,7 +143,7 @@
                         </a>
                     </div>
                     <div class="about-games__article-box">
-                        <a class="about-games__link-article" href="#">
+                        <a class="about-games__link-article" href="#turnTextOver">
                             <article class="about-games__box turn-text-over">
                                 <img class="about-games__img" src="images/turn-text-over.png" alt="Переверни текст">
                                 <div class="about-games__text-title">
@@ -156,7 +156,7 @@
                                 </div>
                             </article>
                         </a>
-                        <a class="about-games__link-article" href="#">
+                        <a class="about-games__link-article" href="#randomColorGenerator">
                             <article class="about-games__box random-color-generator">
                                 <img class="about-games__img" src="images/random-color-generator.png"
                                     alt="Генератор случайных цветов">
@@ -178,6 +178,7 @@
             <img class="about-games__star6" src="images/star6.png" alt="star 6">
             <img class="about-games__star7" src="images/star7.png" alt="star 7">
         </section>
+
         <section class="mini-games">
             <div class="mini-games__big-box">
                 <h2 class="mini-games__title">
@@ -185,7 +186,8 @@
                 </h2>
                 <div class="mini-games__container">
 
-                    <article class="mini-games__article">
+
+                    <article class="mini-games__article"><a class="mini-games__anch" id="guessNumber"></a>
                         <img class="mini-games__img_mobile" src="images/guess-number-mobile.png" alt="Угадай число">
                         <div class="mini-games__option">
                             <div class="mini-games__box">
@@ -199,7 +201,7 @@
                                     Попробуй угадать случайное число от 1 до 100.
                                 </p>
                             </div>
-                            <button class="mini-games__button">
+                            <button class="mini-games__button" onclick="guessNumber()">
                                 Играть!
                             </button>
                         </div>
@@ -207,7 +209,7 @@
                     </article>
 
 
-                    <article class="mini-games__article">
+                    <article class="mini-games__article"><a id="simpleArithmetic"></a>
                         <img class="mini-games__img_mobile" src="images/simple-arithmetic-mobile.png"
                             alt="Простая арифметика">
                         <img class="mini-games__img-big" src="images/simple-arithmetic-big.png"
@@ -224,14 +226,14 @@
                                     Попробуй решить простые арифметические задачи.
                                 </p>
                             </div>
-                            <button class="mini-games__button">
+                            <button class="mini-games__button" onclick="simpleArithmetic()">
                                 Играть!
                             </button>
                         </div>
                     </article>
 
 
-                    <article class="mini-games__article">
+                    <article class="mini-games__article"><a id="turnTextOver"></a>
                         <img class="mini-games__img_mobile" src="images/turn-text-over-mobile.png"
                             alt="Переверни текст">
                         <div class="mini-games__option">
@@ -254,7 +256,7 @@
                     </article>
 
 
-                    <article class="mini-games__article order-reverse">
+                    <article class="mini-games__article order-reverse"><a id="simpleQuiz"></a>
                         <img class="mini-games__img_mobile" src="images/simple-quiz-mobile.png" alt="Простая викторина">
                         <img class="mini-games__img-big" src="images/simple-quiz-big.png" alt="Простая викторина">
                         <div class="mini-games__option">
@@ -276,7 +278,7 @@
                     </article>
 
 
-                    <article class="mini-games__article">
+                    <article class="mini-games__article"><a id="rockScissorsPaper"></a>
                         <img class="mini-games__img_mobile" src="images/rock-scissors-paper-mobile.png"
                             alt="Камень, ножницы, бумага">
                         <div class="mini-games__option">
@@ -300,7 +302,7 @@
                     </article>
 
 
-                    <article class="mini-games__article">
+                    <article class="mini-games__article"><a id="randomColorGenerator"></a>
                         <img class="mini-games__img_mobile" src="images/random-color-generator-mobile.png"
                             alt="Генератор случайных цветов">
                         <img class="mini-games__img-big" src="images/random-color-generator-big.png"
@@ -336,6 +338,8 @@
             Все права защищены.
         </h2>
     </footer>
+
+    <script src="js/games.js"></script>
 </body>
 
 </html>
