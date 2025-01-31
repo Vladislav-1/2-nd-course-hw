@@ -52,7 +52,7 @@
             font-weight: 700;
             line-height: 49px;
             width: 262px;
-            height: 245px;
+            height: 196px;
             text-align: center;
         }
 
@@ -156,8 +156,46 @@
 
         .running-line {
             height: 51.34px;
-
+            padding: 16px 24px 16px 24px;
+            gap: 27.4px;
         }
+    }
+
+    .running-line {
+
+        &__text {
+            font-size: 16px;
+            line-height: 16px;
+            height: 16px;
+        }
+
+        &__star {
+            height: 16px;
+        }
+    }
+
+    .px217 {
+        width: auto;
+    }
+
+    .px273 {
+        min-width: auto;
+    }
+
+    .px326 {
+        min-width: auto;
+    }
+
+    .px422 {
+        min-width: auto;
+    }
+
+    .px519 {
+        min-width: auto;
+    }
+
+    .px588 {
+        min-width: auto;
     }
 
     .about-games {
@@ -181,9 +219,11 @@
         }
 
         &__title {
+            width: calc(100% - 16px);
+            text-align: left;
             font-size: 40px;
             line-height: 49px;
-            margin-left: 16px;
+            margin-left: calc(50vw - 171.5px);
         }
 
         &__container {
@@ -245,6 +285,7 @@
             width: 285px;
             height: 55px;
             margin-top: 32px;
+            font-size: 23px;
         }
 
         &__button:hover {
@@ -274,5 +315,10 @@
     .footer {
         height: 100px;
         width: 100%;
+
+
+        &__title {
+            font-size: 16px;
+        }
     }
 }
