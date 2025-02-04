@@ -83,7 +83,7 @@ _______________
 let turnTextOver = () => {
 	let userText = prompt('Ведите любой текст, состоящий из нескольких слов: ');
 	
-	//alert(userText.split('').reverse().join(''));
+	//alert(userText.split('').reverse().join('')); МЕЖДУ СИМОЛАМИ ПОЯВЛЯЮТСЯ ЛИШНИЕ ПРОБЕЛЫ ???
 	
 	
 	let splitText = userText.split(' ');
