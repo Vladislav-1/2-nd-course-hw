@@ -1,3 +1,7 @@
+/*
+Игра Угадай число
+*/
+
 let guessNumber = () => {
 
     let hiddenNumber = Math.round(Math.random() * 100);
@@ -22,55 +26,22 @@ let guessNumber = () => {
     }
 }
 
+/******************************************************************************************/
+
+/*
+Игра Простая арифметика
+*/
+
 let simpleArithmetic = () => {
-
-    let firstNumber = Math.round(Math.random() * 100);
-    if (firstNumber > 10 && firstNumber < 21) {
-        firstNumber = firstNumber - 10;
-    } else if (firstNumber > 20 && firstNumber < 31) {
-        firstNumber = firstNumber - 20;
-    } else if (firstNumber > 30 && firstNumber < 41) {
-        firstNumber = firstNumber - 30;
-    } else if (firstNumber > 40 && firstNumber < 51) {
-        firstNumber = firstNumber - 40;
-    } else if (firstNumber > 50 && firstNumber < 61) {
-        firstNumber = firstNumber - 50;
-    } else if (firstNumber > 60 && firstNumber < 71) {
-        firstNumber = firstNumber - 60;
-    } else if (firstNumber > 70 && firstNumber < 81) {
-        firstNumber = firstNumber - 70;
-    } else if (firstNumber > 80 && firstNumber < 91) {
-        firstNumber = firstNumber - 80;
-    } else if (firstNumber > 90 && firstNumber < 101) {
-        firstNumber = firstNumber - 90;
-    }
-
-    let secondNumber = Math.round(Math.random() * 100);
-    if (secondNumber > 10 && secondNumber < 21) {
-        secondNumber = secondNumber - 10;
-    } else if (secondNumber > 20 && secondNumber < 31) {
-        secondNumber = secondNumber - 20;
-    } else if (secondNumber > 30 && secondNumber < 41) {
-        secondNumber = secondNumber - 30;
-    } else if (secondNumber > 40 && secondNumber < 51) {
-        secondNumber = secondNumber - 40;
-    } else if (secondNumber > 50 && secondNumber < 61) {
-        secondNumber = secondNumber - 50;
-    } else if (secondNumber > 60 && secondNumber < 71) {
-        secondNumber = secondNumber - 60;
-    } else if (secondNumber > 70 && secondNumber < 81) {
-        secondNumber = secondNumber - 70;
-    } else if (secondNumber > 80 && secondNumber < 91) {
-        secondNumber = secondNumber - 80;
-    } else if (secondNumber > 90 && secondNumber < 101) {
-        secondNumber = secondNumber - 90;
-    }
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min) + min);
     }
+	
+	let firstNumber = getRandomInt(1, 11);
+	let secondNumber = getRandomInt(1, 11);
 
     if (getRandomInt(1, 5) == 1) {
         result = firstNumber + secondNumber;
@@ -101,4 +72,148 @@ _______________
 Правильный ответ: ${result}!
 Сегодня Вы - самое слабое звено нашей игры!!!(((((`);
     }
+}
+
+/******************************************************************************************/
+
+/*
+Игра Переверни текст
+*/
+
+let turnTextOver = () => {
+	let userText = prompt('Ведите любой текст, состоящий из нескольких слов: ');
+	
+	//alert(userText.split('').reverse().join(''));
+	
+	
+	let splitText = userText.split(' ');
+	let newArr = [];
+	for (i = 0; i < splitText.length; i++) {
+		let a = splitText[i].split('').reverse().join('');
+		newArr.push(a);
+	}
+	let reverseText = newArr.reverse().join(' ');
+	alert(reverseText);
+}
+
+/******************************************************************************************/
+
+/*
+Игра Простая викторина
+*/
+
+const quiz = [{'question': 'Какого цвета небо?', 'options': ['1. Красного', '2. Синего', '3. Зеленого'], 'correctAnswer': 2}, {'question': 'Сколько дней в неделе?', 'options': ['1. Шесть', '2. Семь', '3. Восемь'], 'correctAnswer': 2}, {'question': 'Сколько у человека пальцев на одной руке?', 'options': ['1. Четыре', '2. Пять', '3. Шесть'], 'correctAnswer': 2}];
+
+const simpleQuiz = () => {
+	confirm(`Пожалуйста, примите участие в нашей небольшой викторине!
+Вам предстоит ответить на три наших вопроса. Вы готовы?`);
+	let x = 0;
+	let y;
+	for (i = 0; i < quiz.length; i++) {
+		let questions = Number(prompt(`Вопрос № ${i + 1}:
+${quiz[i].question}
+Выберите правильный вариант ответа из предложенных ниже и введите его номер.
+${quiz[i]['options']} `));
+		alert(`Ваш ответ: ${questions}`);
+		if (questions === quiz[i]['correctAnswer']) {
+			x += 1;
+		}
+	}
+	if (x == 0) {
+		y = 'вопросов';
+	} else if (x == 1) {
+		y = 'вопрос';
+	} else if (x == 2 || x == 3) {
+		y = 'вопроса';
+	}
+	alert(`Вы правильно ответили на ${x} ${y}.`);
+}
+
+/******************************************************************************************/
+
+/*
+Игра Камень, ножницы, бумага
+*/
+
+const arrayGameElements = ['камень', 'ножницы', 'бумага'];
+function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+
+const rockScissorsPaper = () => {
+    
+    alert(`Дамы и господа!
+Вашему вниманию представляется игра всех времён и народов:
+
+КАМЕНЬ, НОЖНИЦЫ, БУМАГА
+
+Будьте ввнимательны и осторожны!
+Ваш соперник не прощает ошибок!`);
+    
+    let playersChoice = Number(prompt(`Итак!
+Сделайте Ваш выбор:
+
+1. Камень.
+2. Ножницы.
+3. Бумага.
+
+Введите соответствующую цифру: `));
+    
+    let choosingComputer = getRandomInt(0, 3);
+    
+    let user = arrayGameElements[playersChoice - 1];
+    let computer = arrayGameElements[choosingComputer];
+    
+    alert(`Ваш выбор:
+
+${user}
+
+Выбор Вашего соперника:
+
+${computer}`);
+    
+    
+    if(user === 'камень' && computer === 'ножницы') {
+    	return alert(`Камень побеждает ножницы!
+
+Вам присуждается полная и безоговорочная ПОБЕДА!`);
+	}
+    if (user === 'камень' && computer === 'бумага') {
+    	return alert(`Бумага побеждает камень!
+
+Вам присуждается полное и безоговорочное ПОРАЖЕНИЕ!`);
+    }
+	if (user === 'камень' && computer === 'камень') {
+        return alert(`Выборы совпали, это - НИЧЬЯ!`);
+    }
+	if (user === 'ножницы' && computer === 'камень') {
+        return alert(`Камень побеждает ножницы!
+
+Вам присуждается полное и безоговорочное ПОРАЖЕНИЕ!`);
+    }
+	if (user === 'ножницы' && computer === 'ножницы') {
+        return alert(`Выборы совпали, это - НИЧЬЯ!`);
+    }
+	if (user === 'ножницы' && computer === 'бумага') {
+        return alert(`Ножницы побеждают бумагу!
+
+Вам присуждается полная и безоговорочная ПОБЕДА!`);
+    }
+	if (user === 'бумага' && computer === 'камень') {
+        return alert(`Бумага побеждает камень!
+
+Вам присуждается полная и безоговорочная ПОБЕДА!`);
+    }
+	if (user === 'бумага' && computer === 'ножницы') {
+        return alert(`Ножницы побеждают бумагу!
+
+Вам присуждается полное и безоговорочное ПОРАЖЕНИЕ!`);
+    }
+	if (user === 'бумага' && computer === 'бумага') {
+        return alert(`Выборы совпали, это - НИЧЬЯ!`);
+    }
+    
 }
