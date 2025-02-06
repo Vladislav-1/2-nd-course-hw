@@ -83,7 +83,7 @@ _______________
 let turnTextOver = () => {
 	let userText = prompt('Ведите любой текст, состоящий из нескольких слов: ');
 	
-	//alert(userText.split('').reverse().join('')); МЕЖДУ СИМОЛАМИ ПОЯВЛЯЮТСЯ ЛИШНИЕ ПРОБЕЛЫ ???
+	//alert(userText.split('').reverse().join(''));
 	
 	
 	let splitText = userText.split(' ');
@@ -164,48 +164,56 @@ const rockScissorsPaper = () => {
     
     let choosingComputer = getRandomInt(0, 3);
     
-    let x = arrayGameElements[playersChoice - 1];
-    let y = arrayGameElements[choosingComputer];
+    let user = arrayGameElements[playersChoice - 1];
+    let computer = arrayGameElements[choosingComputer];
     
     alert(`Ваш выбор:
 
-${x}
+${user}
 
 Выбор Вашего соперника:
 
-${y}`);
+${computer}`);
     
     
-    if(x == 'камень' && y == 'ножницы') {
-    alert(`Камень побеждает ножницы!
+    if(user === 'камень' && computer === 'ножницы') {
+    	return alert(`Камень побеждает ножницы!
 
 Вам присуждается полная и безоговорочная ПОБЕДА!`);
-    } else if (x == 'камень' && y == 'бумага') {
-        alert(`Бумага побеждает камень!
+	}
+    if (user === 'камень' && computer === 'бумага') {
+    	return alert(`Бумага побеждает камень!
 
 Вам присуждается полное и безоговорочное ПОРАЖЕНИЕ!`);
-    } else if (x == 'камень' && y == 'камень') {
-        alert(`Выборы совпали, это - НИЧЬЯ!`);
-    } else if (x == 'ножницы' && y == 'камень') {
-        alert(`Камень побеждает ножницы!
+    }
+	if (user === 'камень' && computer === 'камень') {
+        return alert(`Выборы совпали, это - НИЧЬЯ!`);
+    }
+	if (user === 'ножницы' && computer === 'камень') {
+        return alert(`Камень побеждает ножницы!
 
 Вам присуждается полное и безоговорочное ПОРАЖЕНИЕ!`);
-    } else if (x == 'ножницы' && y == 'ножницы') {
-        alert(`Выборы совпали, это - НИЧЬЯ!`);
-    } else if (x == 'ножницы' && y == 'бумага') {
-        alert(`Ножницы побеждают бумагу!
+    }
+	if (user === 'ножницы' && computer === 'ножницы') {
+        return alert(`Выборы совпали, это - НИЧЬЯ!`);
+    }
+	if (user === 'ножницы' && computer === 'бумага') {
+        return alert(`Ножницы побеждают бумагу!
 
 Вам присуждается полная и безоговорочная ПОБЕДА!`);
-    } else if (x == 'бумага' && y == 'камень') {
-        alert(`Бумага побеждает камень!
+    }
+	if (user === 'бумага' && computer === 'камень') {
+        return alert(`Бумага побеждает камень!
 
 Вам присуждается полная и безоговорочная ПОБЕДА!`);
-    } else if (x == 'бумага' && y == 'ножницы') {
-        alert(`Ножницы побеждают бумагу!
+    }
+	if (user === 'бумага' && computer === 'ножницы') {
+        return alert(`Ножницы побеждают бумагу!
 
 Вам присуждается полное и безоговорочное ПОРАЖЕНИЕ!`);
-    } else if (x == 'бумага' && y == 'бумага') {
-        alert(`Выборы совпали, это - НИЧЬЯ!`);
+    }
+	if (user === 'бумага' && computer === 'бумага') {
+        return alert(`Выборы совпали, это - НИЧЬЯ!`);
     }
     
 }
