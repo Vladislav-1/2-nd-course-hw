@@ -163,7 +163,7 @@ html {
 
 .running-line {
     height: 90px;
-    width: auto;
+    width: calc(3171px + 100vw);
     position: absolute;
     padding-left: 49px;
     left: 0px;
@@ -187,6 +187,8 @@ html {
         display: inline-block;
 
     }
+
+    &__star {}
 }
 
 .px217 {
