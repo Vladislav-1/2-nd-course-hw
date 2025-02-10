@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+    <!-- ЗАГОЛОВОК -->
     <header class="header-top">
         <section class="header-top__box-text">
             <div class="header-top__title-text-button">
@@ -51,25 +53,31 @@
             <img class="header-top__star14" src="images/star14.png" alt="star 14">
             <img class="header-top__star15" src="images/star15.png" alt="star 15">
         </section>
+
         <!-- БЕГУЩАЯ СТРОКА -->
         <div class="running-line">
+
             <div class="running-line__text px217">Викторина</div>
-            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <img class="running-line__star" src="images/star-running-line.svg" alt="Звезда в бегущей строке">
             <div class="running-line__text px273">угадай&nbsp;число</div>
-            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <img class="running-line__star" src="images/star-running-line.svg" alt="Звезда в бегущей строке">
             <div class="running-line__text px326">Переверни&nbsp;текст</div>
-            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <img class="running-line__star" src="images/star-running-line.svg" alt="Звезда в бегущей строке">
             <div class="running-line__text px422">Простая&nbsp;арифметика</div>
-            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <img class="running-line__star" src="images/star-running-line.svg" alt="Звезда в бегущей строке">
             <div class="running-line__text px519">Камень,&nbsp;ножницы,&nbsp;бумага</div>
-            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <img class="running-line__star" src="images/star-running-line.svg" alt="Звезда в бегущей строке">
             <div class="running-line__text px588">Генератор&nbsp;случайных&nbsp;цветов</div>
-            <img class="running-line__star" src="images/star-running-line.png" alt="Звезда в бегущей строке">
+            <img class="running-line__star" src="images/star-running-line.svg" alt="Звезда в бегущей строке">
+
         </div>
+
     </header>
 
+    <!-- Якорь для перехода по клику на кнопку Поехали! -->
     <a id="anchor-about-games"></a>
 
+    <!--  -->
     <main class="main">
         <section class="about-games">
             <div class="about-games__big-box">
@@ -318,7 +326,8 @@
                                 <p class="mini-games__text_mobile">
                                     Игра, в которой при клике<br>на кнопку фон страницы меняется на случайный.
                                 </p>
-                                <button class="mini-games__button">
+                                <button class="mini-games__button randomColorGeneratorButton"
+                                    onclick="randomColorGenerator()">
                                     Играть!
                                 </button>
                             </div>
