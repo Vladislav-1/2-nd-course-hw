@@ -140,7 +140,7 @@ html {
 
 .running-line {
   height: 90px;
-  width: auto;
+  width: calc(3171px + 100vw);
   position: absolute;
   padding-left: 49px;
   left: 0px;
@@ -163,7 +163,6 @@ html {
   text-transform: uppercase;
   display: inline-block;
 }
-
 .px217 {
   width: 217px;
 }
@@ -495,6 +494,98 @@ html {
   cursor: pointer;
 }
 
+.running-line__text {
+  animation-name: TextShow;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes TextShow {
+  0% {
+    color: rgb(188, 236, 48);
+  }
+  25% {
+    color: rgb(94, 118, 24);
+  }
+  50% {
+    color: rgb(0, 0, 0);
+  }
+  75% {
+    color: rgb(94, 118, 24);
+  }
+  100% {
+    color: rgb(188, 236, 48);
+  }
+}
+.running-line__star {
+  animation-name: StarShow;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes StarShow {
+  0% {
+    filter: brightness(100%);
+  }
+  25% {
+    filter: brightness(50%);
+  }
+  50% {
+    filter: brightness(0%);
+  }
+  75% {
+    filter: brightness(50%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+.running-line {
+  animation-name: TextFloating;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes TextFloating {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -3171px;
+  }
+}
+@media (max-width: 767px) {
+  .running-line {
+    width: calc(1585px + 100vw);
+  }
+  .running-line__text {
+    animation-name: TextShow;
+    animation-duration: 5s;
+  }
+  .running-line__star {
+    animation-name: StarShow;
+    animation-duration: 5s;
+  }
+  .running-line {
+    animation-name: TextFloating;
+    animation-duration: 30s;
+  }
+  @keyframes TextFloating {
+    0% {
+      left: 0px;
+    }
+    100% {
+      left: -1585px;
+    }
+  }
+}
 @media (max-width: 767px) {
   body {
     background: rgb(225, 255, 143);
