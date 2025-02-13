@@ -25,13 +25,13 @@ html {
   height: 710px;
   overflow: hidden;
 }
-.header-top__title-text-button {
+.header-top__set {
   width: 768px;
   height: 188px;
   margin-top: 196px;
   margin-left: 120px;
 }
-.header-top__title-text-button-mobile {
+.header-top__set-mobile {
   display: none;
 }
 .header-top__title {
@@ -605,10 +605,10 @@ html {
     flex-direction: column;
     align-items: center;
   }
-  .header-top__title-text-button {
+  .header-top__set {
     display: none;
   }
-  .header-top__title-text-button-mobile {
+  .header-top__set-mobile {
     height: 420px;
     width: 343px;
     display: flex;
