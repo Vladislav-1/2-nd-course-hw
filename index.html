@@ -15,7 +15,7 @@
     <!-- ЗАГОЛОВОК -->
     <header class="header-top">
         <section class="header-top__box-text">
-            <div class="header-top__title-text-button">
+            <div class="header-top__set">
                 <h1 class="header-top__title">
                     Добро пожаловать <span class="header-top__bufer"></span>на мой сайт мини-игр
                 </h1>
@@ -27,7 +27,7 @@
                     Поехали!
                 </a>
             </div>
-            <div class="header-top__title-text-button-mobile">
+            <div class="header-top__set-mobile">
                 <div class="header-top__container-mini">
                     <h1 class="header-top__title">
                         Добро пожаловать на мой сайт мини-игр
@@ -77,11 +77,14 @@
     <!-- Якорь для перехода по клику на кнопку Поехали! -->
     <a id="anchor-about-games"></a>
 
-    <!--  -->
+    <!-- ОСНОВНОЙ БЛОК -->
     <main class="main">
+
+        <!-- 1-ый блок с играми -->
         <section class="about-games">
             <div class="about-games__big-box">
                 <div class="about-games__top-item">
+                    <!-- Заголовок с аннотацией -->
                     <h2 class="about-games__title">
                         Об играх
                     </h2>
@@ -91,7 +94,9 @@
                         Все игры доступны для пользования.
                     </p>
                 </div>
+                <!-- Блок с анонсами игр -->
                 <div class="about-games__bottom-item">
+                    <!-- Блок с карточками игр "Угадай число", "Камень, ножницы, бумага" -->
                     <div class="about-games__article-box">
                         <a class="about-games__link-article" href="#guessNumber">
                             <article class="about-games__box guess-number">
@@ -121,6 +126,7 @@
                             </article>
                         </a>
                     </div>
+                    <!-- Блок с карточками игр "Простая арифметика", "Простая викторина" -->
                     <div class="about-games__article-box">
                         <a class="about-games__link-article" href="#simpleArithmetic">
                             <article class="about-games__box simple-arithmetic">
@@ -150,6 +156,7 @@
                             </article>
                         </a>
                     </div>
+                    <!-- Блок с карточками игр "Переверни текст", "Генератор случайных цветов" -->
                     <div class="about-games__article-box">
                         <a class="about-games__link-article" href="#turnTextOver">
                             <article class="about-games__box turn-text-over">
@@ -187,6 +194,7 @@
             <img class="about-games__star7" src="images/star7.png" alt="star 7">
         </section>
 
+        <!-- 2-ой блок с играми -->
         <section class="mini-games">
             <div class="mini-games__big-box">
                 <h2 class="mini-games__title">
@@ -194,7 +202,7 @@
                 </h2>
                 <div class="mini-games__container">
 
-
+                    <!-- Игра "Угадай число" -->
                     <article class="mini-games__article"><a class="mini-games__anch" id="guessNumber"></a>
                         <img class="mini-games__img_mobile" src="images/guess-number-mobile.png" alt="Угадай число">
                         <div class="mini-games__option">
@@ -216,7 +224,7 @@
                         <img class="mini-games__img-big" src="images/guess-number-big.png" alt="Угадай число">
                     </article>
 
-
+                    <!-- Игра "Простая арифметика" -->
                     <article class="mini-games__article"><a id="simpleArithmetic"></a>
                         <img class="mini-games__img_mobile" src="images/simple-arithmetic-mobile.png"
                             alt="Простая арифметика">
@@ -240,7 +248,7 @@
                         </div>
                     </article>
 
-
+                    <!-- Игра "Переверни текст" -->
                     <article class="mini-games__article"><a id="turnTextOver"></a>
                         <img class="mini-games__img_mobile" src="images/turn-text-over-mobile.png"
                             alt="Переверни текст">
@@ -263,7 +271,7 @@
                         <img class="mini-games__img-big" src="images/turn-text-over-big.png" alt="Переверни текст">
                     </article>
 
-
+                    <!-- Игра "Викторина" -->
                     <article class="mini-games__article order-reverse"><a id="simpleQuiz"></a>
                         <img class="mini-games__img_mobile" src="images/simple-quiz-mobile.png" alt="Простая викторина">
                         <img class="mini-games__img-big" src="images/simple-quiz-big.png" alt="Простая викторина">
@@ -285,7 +293,7 @@
                         </div>
                     </article>
 
-
+                    <!-- Игра "Камень, ножницы, бумага" -->
                     <article class="mini-games__article"><a id="rockScissorsPaper"></a>
                         <img class="mini-games__img_mobile" src="images/rock-scissors-paper-mobile.png"
                             alt="Камень, ножницы, бумага">
@@ -309,7 +317,7 @@
                             alt="Камень, ножницы, бумага">
                     </article>
 
-
+                    <!-- Игра "Генератор случайных цветов" -->
                     <article class="mini-games__article"><a id="randomColorGenerator"></a>
                         <img class="mini-games__img_mobile" src="images/random-color-generator-mobile.png"
                             alt="Генератор случайных цветов">
@@ -342,6 +350,8 @@
             </div>
         </section>
     </main>
+
+    <!-- ПОДВАЛ САЙТА -->
     <footer class="footer">
         <h2 class="footer__title">
             Все права защищены.
