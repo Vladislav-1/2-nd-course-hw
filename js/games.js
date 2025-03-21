@@ -115,24 +115,39 @@ let turnTextOver = () => {
 Игра Простая викторина
 */
 
-const quiz = [{ 'question': 'Какого цвета небо?', 'options': ['1. Красного', '2. Синего', '3. Зеленого'], 'correctAnswer': 2 }, { 'question': 'Сколько дней в неделе?', 'options': ['1. Шесть', '2. Семь', '3. Восемь'], 'correctAnswer': 2 }, { 'question': 'Сколько у человека пальцев на одной руке?', 'options': ['1. Четыре', '2. Пять', '3. Шесть'], 'correctAnswer': 2 }];
+const quiz = [
+    { 'question': 'Какого цвета небо?', 'options': ['1. Красного', '2. Синего', '3. Зеленого'], 'correctAnswer': 2 },
+    { 'question': 'Сколько дней в неделе?', 'options': ['1. Шесть', '2. Семь', '3. Восемь'], 'correctAnswer': 2 },
+    { 'question': 'Сколько у человека пальцев на одной руке?', 'options': ['1. Четыре', '2. Пять', '3. Шесть'], 'correctAnswer': 2 }
+];
+
 const simpleQuiz = () => {
-    confirm(`Пожалуйста, примите участие в нашей небольшой викторине!
-Вам предстоит ответить на три наших вопроса. Вы готовы?`);
-    let x = 0;
-    let y;
-    for (i = 0; i < quiz.length; i++) {
-        let questions = Number(prompt(`Вопрос № ${i + 1}:
-${quiz[i].question}
-Выберите правильный вариант ответа из предложенных ниже и введите его номер.
-${quiz[i]['options']} `));
-        alert(`Ваш ответ: ${questions}`);
-        if (questions === quiz[i]['correctAnswer']) {
-            x += 1;
+    let correctAnswers = 0;
+
+    const askQuestion = (index) => {
+        if (index === quiz.length) {
+            alert(`Все вопросы заданы. Количество правильных ответов: ${correctAnswers}.`);
+            return;
         }
-    }
-    alert(`Ваших правильных ответов: ${x} из 3.`);
-}
+
+        const answer = prompt(`Вопрос: ${quiz[index].question}\nВарианты ответов: ${quiz[index].options.join('\n')}`);
+
+        if (answer === null) {
+            alert('Игра прервана. Нажата клавиша Escape.');
+            return;
+        }
+
+        if (parseInt(answer) === quiz[index].correctAnswer + 1) {
+            correctAnswers++;
+        }
+
+        askQuestion(index + 1);
+    };
+
+    confirm('Пожалуйста, примите участие в нашей викторине. Нажмите "ОК", чтобы начать.');
+
+    askQuestion(0);
+};
 
 /******************************************************************************************/
 
