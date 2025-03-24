@@ -98,16 +98,28 @@ _______________
 */
 
 let turnTextOver = () => {
-    let userText = prompt('Ведите любой текст, состоящий из нескольких слов: ');
-    let splitText = userText.split(' ');
-    let newArr = [];
-    for (i = 0; i < splitText.length; i++) {
-        let a = splitText[i].split('').reverse().join('');
-        newArr.push(a);
+        let userText = prompt('Ведите любой текст, состоящий из нескольких слов: ');
+    
+        // Проверка корректности введённого текста
+        if (!userText || userText.trim() === '') {
+            alert('Пожалуйста, введите текст.');
+            return;
+        }
+    
+        try {
+            let splitText = userText.split(' ');
+            let newArr = [];
+            for (let i = 0; i < splitText.length; ) {
+                let a = splitText[i].split('').reverse().join('');
+                newArr.push(a);
+                i++;
+            }
+            let reverseText = newArr.reverse().join(' ');
+            alert(reverseText);
+        } catch (error) {
+            alert('Произошла ошибка при обработке ввода. Пожалуйста, попробуйте ещё раз.');
+        }
     }
-    let reverseText = newArr.reverse().join(' ');
-    alert(reverseText);
-}
 
 /******************************************************************************************/
 
