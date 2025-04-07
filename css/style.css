@@ -41,10 +41,7 @@ html {
   font-weight: 700;
   line-height: 78px;
 }
-.header-top__bufer {
-  display: inline-block;
-  /*width: 7px;*/
-}
+
 .header-top__text {
   color: rgb(32, 32, 39);
   font-family: Montserrat;
