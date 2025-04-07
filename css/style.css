@@ -35,6 +35,7 @@ html {
   display: none;
 }
 .header-top__title {
+  max-width: 769px;
   color: rgb(32, 32, 39);
   font-family: Montserrat;
   font-size: 64px;
