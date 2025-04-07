@@ -36,16 +36,12 @@ html {
     }
 
     &__title {
+        max-width: 769px;
         color: rgb(32, 32, 39);
         font-family: Montserrat;
         font-size: 64px;
         font-weight: 700;
         line-height: 78px;
-    }
-
-    &__bufer {
-        display: inline-block;
-        /*width: 8px;*/
     }
 
     &__text {
