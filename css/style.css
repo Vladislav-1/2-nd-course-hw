@@ -43,7 +43,7 @@ html {
 }
 .header-top__bufer {
   display: inline-block;
-  width: 8px;
+  /*width: 8px;*/
 }
 .header-top__text {
   color: rgb(32, 32, 39);
